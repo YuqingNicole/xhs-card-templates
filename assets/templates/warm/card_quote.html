@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1440px;
+    background: #ede4d8;
+    font-family: 'Noto Serif SC', serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(210,165,120,0.4) 0%, transparent 65%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(100px);
+  }
+  .blob2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(235,200,160,0.5) 0%, transparent 70%);
+    top: 50px; right: -100px;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 90px 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .top-deco {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .deco-line {
+    width: 40px;
+    height: 1px;
+    background: rgba(150, 90, 50, 0.4);
+  }
+  .deco-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 90, 50, 0.55);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* 引言核心区 */
+  .quote-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  .quote-mark {
+    font-size: 120px;
+    line-height: 0.8;
+    color: rgba(180, 110, 60, 0.18);
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+  }
+
+  .quote-text {
+    font-size: 50px;
+    font-weight: 400;
+    color: #3d2314;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    margin-bottom: 48px;
+  }
+
+  .quote-source {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .source-line {
+    width: 32px;
+    height: 1px;
+    background: rgba(180, 110, 60, 0.4);
+  }
+  .source-text {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgba(120, 75, 40, 0.6);
+    letter-spacing: 0.08em;
+  }
+
+  /* 下方补充说明 */
+  .note {
+    padding: 36px 0 0;
+    border-top: 1px solid rgba(180, 120, 70, 0.15);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: rgba(80, 50, 25, 0.55);
+    line-height: 1.8;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .author {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 100, 60, 0.5);
+    letter-spacing: 0.1em;
+  }
+  .page-num {
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(190, 130, 80, 0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+
+  <div class="container">
+    <div class="top-deco">
+      <div class="deco-line"></div>
+      <div class="deco-text">金句 / 结语</div>
+    </div>
+
+    <div class="quote-area">
+      <div class="quote-mark">"</div>
+      <div class="quote-text">这里放一句让人想截图收藏的话，不用太长，有力就好</div>
+      <div class="quote-source">
+        <div class="source-line"></div>
+        <div class="source-text">来源 · 作者或你自己</div>
+      </div>
+    </div>
+
+    <div class="note">
+      可以在这里加一两句补充说明，或者呼吁互动：「你觉得呢？评论区见」
+    </div>
+
+    <div class="bottom">
+      <div class="author">@你的账号</div>
+      <div class="page-num">04</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px;
+    background: #1a1a14;
+    font-family: 'Noto Serif SC', serif;
+    overflow: hidden;
+    position: relative;
+  }
+  .blob1 {
+    position: absolute;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(180,140,60,0.2) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    border-radius: 50%; filter: blur(80px);
+  }
+  .blob2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(100,80,30,0.3) 0%, transparent 70%);
+    bottom: 0; left: -80px;
+    border-radius: 50%; filter: blur(70px);
+  }
+  .noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.15;
+  }
+  .container {
+    position: relative; z-index: 10;
+    width: 100%; height: 100%;
+    padding: 90px 88px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .top-tag {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px; font-weight: 300;
+    color: rgba(200,170,90,0.7);
+    letter-spacing: 0.25em;
+  }
+  .top-tag::before {
+    content: ''; width: 30px; height: 1px;
+    background: rgba(200,170,90,0.5);
+  }
+  .center {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 60px 0;
+  }
+  .main-title {
+    font-size: 86px; font-weight: 600;
+    color: #e8d5a0;
+    line-height: 1.2; margin-bottom: 40px;
+    letter-spacing: 0.01em;
+  }
+  .divider {
+    width: 50px; height: 1px;
+    background: linear-gradient(90deg, rgba(200,170,90,0.6), transparent);
+    margin-bottom: 36px;
+  }
+  .subtitle {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 26px; font-weight: 300;
+    color: rgba(200,180,130,0.5);
+    line-height: 1.8; letter-spacing: 0.06em;
+  }
+  .bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+  .author {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 20px; font-weight: 300;
+    color: rgba(200,170,90,0.4); letter-spacing: 0.15em;
+  }
+  .page-num {
+    font-size: 52px; font-weight: 300;
+    color: rgba(200,170,90,0.12);
+  }
+</style>
+</head>
+<body>
+  <div class="blob1"></div><div class="blob2"></div><div class="noise"></div>
+  <div class="container">
+    <div class="top-tag">效率干货</div>
+    <div class="center">
+      <div class="main-title">用了 AI 之后<br>我再也不熬夜了</div>
+      <div class="divider"></div>
+      <div class="subtitle">5 个真实改变我工作方式的工具<br>不是广告，是亲测有效</div>
+    </div>
+    <div class="bottom">
+      <div class="author">@Nicole</div>
+      <div class="page-num">01</div>
+    </div>
+  </div>
+</body>
+</html>

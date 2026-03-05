@@ -1,0 +1,15 @@
+{
+  "name": "xhs-card-templates",
+  "version": "1.0.0",
+  "displayName": "小红书精美图文模版",
+  "description": "5 种设计风格的小红书图文卡片模版，支持封面 + 正文 + 金句，一键渲染高清 PNG",
+  "author": "Nicole & 小天才",
+  "skills": ["SKILL.md"],
+  "scripts": {
+    "render": "scripts/render.py"
+  },
+  "dependencies": {
+    "python": ">=3.8",
+    "playwright": "chromium"
+  }
+}

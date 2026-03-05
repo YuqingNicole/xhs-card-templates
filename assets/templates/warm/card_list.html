@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1440px;
+    background: #f7f0e8;
+    font-family: 'Noto Sans SC', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(225,180,140,0.4) 0%, transparent 70%);
+    top: -80px; right: -80px;
+    border-radius: 50%;
+    filter: blur(70px);
+  }
+  .blob2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(200,155,115,0.3) 0%, transparent 70%);
+    bottom: 100px; left: -60px;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 90px 88px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-label {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 100, 60, 0.6);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .card-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #3d2314;
+    line-height: 1.3;
+    margin-bottom: 56px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(180, 120, 70, 0.2);
+  }
+
+  .items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(180, 120, 70, 0.12);
+  }
+  .item:last-child {
+    border-bottom: none;
+  }
+
+  .item-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: rgba(190, 130, 80, 0.35);
+    line-height: 1;
+    min-width: 52px;
+    margin-top: 4px;
+  }
+
+  .item-content {
+    flex: 1;
+  }
+
+  .item-title {
+    font-size: 34px;
+    font-weight: 400;
+    color: #3d2314;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .item-desc {
+    font-size: 26px;
+    font-weight: 300;
+    color: rgba(80, 50, 25, 0.6);
+    line-height: 1.7;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .author {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 100, 60, 0.5);
+    letter-spacing: 0.1em;
+  }
+  .page-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(190, 130, 80, 0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+
+  <div class="container">
+    <div class="card-label">要点清单</div>
+    <div class="card-title">小标题放这里</div>
+
+    <div class="items">
+      <div class="item">
+        <div class="item-num">01</div>
+        <div class="item-content">
+          <div class="item-title">要点一的标题</div>
+          <div class="item-desc">这里写一两句解释，简洁有力，不要太长</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-num">02</div>
+        <div class="item-content">
+          <div class="item-title">要点二的标题</div>
+          <div class="item-desc">这里写一两句解释，简洁有力，不要太长</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-num">03</div>
+        <div class="item-content">
+          <div class="item-title">要点三的标题</div>
+          <div class="item-desc">这里写一两句解释，简洁有力，不要太长</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-num">04</div>
+        <div class="item-content">
+          <div class="item-title">要点四的标题</div>
+          <div class="item-desc">这里写一两句解释，简洁有力，不要太长</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="author">@你的账号</div>
+      <div class="page-num">02</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "xhs-card-templates",
+  "version": "1.0.0",
+  "description": "小红书精美图文模版 skill",
+  "scripts": {
+    "render": "python3 scripts/render.py"
+  },
+  "dependencies": {}
+}

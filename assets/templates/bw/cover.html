@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@100;300;400&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px; height: 1440px;
+    background: #fafaf8;
+    font-family: 'Noto Sans SC', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  /* 包豪斯装饰线 */
+  .line-h {
+    position: absolute;
+    width: 100%; height: 1px;
+    background: #1a1a1a;
+    top: 180px;
+  }
+  .line-v {
+    position: absolute;
+    width: 1px; height: 100%;
+    background: #1a1a1a;
+    left: 88px;
+  }
+  .accent-block {
+    position: absolute;
+    width: 12px; height: 200px;
+    background: #1a1a1a;
+    right: 88px; top: 400px;
+  }
+  .container {
+    position: relative; z-index: 10;
+    width: 100%; height: 100%;
+    padding: 90px 88px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .top {
+    padding-left: 40px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .top-num {
+    font-size: 100px; font-weight: 100;
+    color: rgba(0,0,0,0.08);
+    line-height: 1; letter-spacing: -0.05em;
+  }
+  .top-tag {
+    font-size: 18px; font-weight: 300;
+    color: rgba(0,0,0,0.4);
+    letter-spacing: 0.3em; text-transform: uppercase;
+  }
+  .center {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 60px 0 60px 40px;
+  }
+  .main-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 90px; font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.15; margin-bottom: 44px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-size: 26px; font-weight: 300;
+    color: rgba(0,0,0,0.45);
+    line-height: 1.8; letter-spacing: 0.04em;
+    max-width: 600px;
+  }
+  .bottom {
+    display: flex; justify-content: space-between;
+    align-items: flex-end; padding-left: 40px;
+  }
+  .author {
+    font-size: 18px; font-weight: 300;
+    color: rgba(0,0,0,0.3); letter-spacing: 0.15em;
+  }
+  .page-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 48px; font-weight: 300;
+    color: rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body>
+  <div class="line-h"></div>
+  <div class="line-v"></div>
+  <div class="accent-block"></div>
+  <div class="container">
+    <div class="top">
+      <div class="top-num">05</div>
+      <div class="top-tag">效率干货</div>
+    </div>
+    <div class="center">
+      <div class="main-title">用了 AI<br>不再<br>熬夜了</div>
+      <div class="subtitle">5 个真实改变我工作方式的工具<br>不是广告，是亲测有效</div>
+    </div>
+    <div class="bottom">
+      <div class="author">@Nicole</div>
+      <div class="page-num">01</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1440px;
+    background: #f4ede3;
+    font-family: 'Noto Sans SC', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(215,170,130,0.35) 0%, transparent 65%);
+    top: 200px; left: -200px;
+    border-radius: 50%;
+    filter: blur(90px);
+  }
+  .blob2 {
+    position: absolute;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(235,195,155,0.4) 0%, transparent 70%);
+    bottom: -50px; right: -80px;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 90px 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-label {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 100, 60, 0.6);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #3d2314;
+    line-height: 1.3;
+  }
+
+  /* 正文段落区 */
+  .body-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #c4855a;
+    letter-spacing: 0.06em;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(196, 133, 90, 0.3), transparent);
+  }
+
+  .section-text {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(60, 35, 15, 0.75);
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .author {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(150, 100, 60, 0.5);
+    letter-spacing: 0.1em;
+  }
+  .page-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(190, 130, 80, 0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="blob1"></div>
+  <div class="blob2"></div>
+
+  <div class="container">
+    <div class="top">
+      <div class="card-label">详细说说</div>
+      <div class="card-title">这里是这一页<br>的小标题</div>
+    </div>
+
+    <div class="body-area">
+      <div class="section">
+        <div class="section-label">第一点</div>
+        <div class="section-text">这里写正文内容，可以写两三句话，娓娓道来，不要太短也不要太长，保持节奏感就好。</div>
+      </div>
+      <div class="section">
+        <div class="section-label">第二点</div>
+        <div class="section-text">这里写正文内容，可以写两三句话，娓娓道来，不要太短也不要太长，保持节奏感就好。</div>
+      </div>
+      <div class="section">
+        <div class="section-label">第三点</div>
+        <div class="section-text">这里写正文内容，可以写两三句话，娓娓道来，不要太短也不要太长，保持节奏感就好。</div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="author">@你的账号</div>
+      <div class="page-num">03</div>
+    </div>
+  </div>
+</body>
+</html>
