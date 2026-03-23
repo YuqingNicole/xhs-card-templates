@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 720px; height: 960px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: -apple-system, 'PingFang SC', sans-serif;
+    color: #fff;
+    display: flex; flex-direction: column;
+    padding: 60px 56px;
+  }
+  .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 6px 16px; font-size: 13px; color: #ccc;
+    margin-bottom: 28px; width: fit-content;
+  }
+  .title { font-size: 30px; font-weight: 800; line-height: 1.4; margin-bottom: 12px; }
+  .source { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 40px; }
+  .divider { width: 40px; height: 3px; background: #7c6bf6; border-radius: 2px; margin-bottom: 36px; }
+  .points { flex: 1; display: flex; flex-direction: column; gap: 22px; }
+  .point { display: flex; gap: 14px; align-items: flex-start; }
+  .num {
+    width: 26px; height: 26px; min-width: 26px;
+    background: rgba(124,107,246,0.25); border: 1px solid #7c6bf6;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; color: #b8abff; margin-top: 2px;
+  }
+  .point-text { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.88); }
+  .point-text strong { color: #fff; font-weight: 700; display: block; margin-bottom: 2px; }
+  .footer {
+    margin-top: 40px; display: flex; justify-content: space-between; align-items: center;
+    padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .author { font-size: 12px; color: rgba(255,255,255,0.4); }
+  .author span { color: rgba(255,255,255,0.7); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="tag">🎙️ 播客笔记</div>
+  <div class="title">{{TITLE}}</div>
+  <div class="source">{{SOURCE}}</div>
+  <div class="divider"></div>
+  <div class="points">
+    <!-- 重复以下结构，最多5个要点 -->
+    <div class="point">
+      <div class="num">1</div>
+      <div class="point-text"><strong>{{POINT_TITLE}}</strong>{{POINT_DESC}}</div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="author">by <span>Nicole</span> · nicolewithlove.substack.com</div>
+    <div>🟣</div>
+  </div>
+</body>
+</html>

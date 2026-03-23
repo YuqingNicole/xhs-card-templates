@@ -111,3 +111,22 @@ def fill_template(html_path: str, replacements: dict, output_path: str):
 - 给 dark/bw/blue/pink 各补充完整 4 张卡片
 - 增加"横版"模版（1080×1080）用于封面
 - 增加自动发布到小红书功能（配合 Auto-Redbook-Skills）
+
+---
+
+## 播客总结卡（新增）
+
+专为播客/访谈内容笔记设计，暗系高级风格，含要点列表 + 作者署名。
+
+### 使用场景
+当用户说「帮我做播客总结图」「做个播客笔记卡」时触发。
+
+### 模板文件
+- `assets/podcast/podcast-card.html` — 播客要点卡（720×960，5个要点）
+- `assets/podcast/quote-card.html` — 金句卡（720×720，单条金句）
+
+### 快速生成步骤
+1. 复制对应模板文件到 `/tmp/xhs_card.html`
+2. 替换 `{{TITLE}}` `{{SOURCE}}` `{{POINT_TITLE}}` `{{POINT_DESC}}` 等占位符
+3. 用 `open /tmp/xhs_card.html` 在浏览器预览
+4. 截图尺寸：播客卡 720×960，金句卡 720×720
